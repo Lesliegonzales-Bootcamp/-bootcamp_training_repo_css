@@ -4,7 +4,7 @@
         <headerToolbar>
             <OverflowToolbar id="idOFT">
                 <content>
-                    <Title id="idTableTitleSCart" text="{i18n>shoppingTblTitle}"/>
+                    <Title id="idTableTitleSCart" text="{i18n>shoppingTblTitle}" class="header sapMBar-CTX sapMTitle"/>
                     <ToolbarSpacer id="idTSpacer"/>
                     <Button id="idBtnAddItems" icon="sap-icon://cart-4" tooltip="{i18n>addToCartTooltip}" press="onAddItem"/>
                 </content>

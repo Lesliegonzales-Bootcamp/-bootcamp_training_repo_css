@@ -112,6 +112,28 @@ function (Controller,MessageToast) {
         });
     }
   },
+  onPressClear: function () {
+    // IDs of all the input fields to clear
+    var aInputIds = [
+        "idInptFName",        // First Name
+        "idInptLName",        // Last Name
+        "idInputPhone",       // Phone
+        "idInputCreditCard",   // Credit Card
+        "idSelMOP"             // MOP
+    ];
+
+    // Loop through and clear them
+    aInputIds.forEach(function (sId) {
+        var oInput = this.getView().byId(sId);
+        if (oInput) {
+            oInput.setValue("");
+            oInput.setValueState("None"); // clear any error highlighting
+        }
+    }.bind(this));
+
+    // Optional: Show confirmation
+    this.fnDisplayMsg("All fields have been cleared.");
+    },
 
  });
 });

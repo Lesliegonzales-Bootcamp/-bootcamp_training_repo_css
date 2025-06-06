@@ -1,1 +1,19 @@
 /* Enter your custom styles here */
+.header .sapMBar-CTX .sapMTitle {
+    color: #1a73e8 ;  
+    text-shadow: none;
+}
+.checkoutButton .sapMBtnInner{
+    color:  #1ae835 !important;
+}
+.backButton .sapMBtnInner{
+    color:  #e81a88 !important;
+}
+.sapUiSmallMargin .sapMLabel,
+.sapUiSmallMargin .sapMTitle {
+    color: #1a73e8 
+     
+}
+html.sap-desktop .footerName .sapMIBar.sapMFooter-CTX {
+    background-color: #ffcde8 !important;
+}
