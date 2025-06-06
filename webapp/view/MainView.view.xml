@@ -1,0 +1,37 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:layout="sap.ui.layout" controllerName="com.training.day3exer1gonzales.controller.MainView" xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core" displayBlock="true" >
+<Page id="page" title="{i18n>title}" floatingFooter="true"> 
+    <VBox id="idVBox" class="sapUiSmallMargin">
+                <f:SimpleForm id="idSimpleForm" editable="true" layout="ResponsiveGridLayout" title="Details" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                    <f:content>
+                        <Label id="idLblFName" text="{i18n>FirstNameLbl1}"/>
+                        <Input id="idInptFName" value="" />
+                        <Label id="idLblLName" text="{i18n>LastNameLb2}" />
+                        <Input id="idInptLName" value="" />
+                        <Label id="idLblMOP" text="{i18n>ModeofPaymentlb3}" />
+                        <Select id="idSelMOP" forceSelection="false" change="onChangeMOP">  
+                            <items>
+                                <core:Item id="idItmCOD" text="{i18n>CashonDeliverylb3}" key="COD"/>
+                                <core:Item id="idItmCC" text="{i18n>CreditCardlb4}" key="CC"/>
+                                <core:Item id="idItmGCash" text="{i18n>GCashlb5}" key="GCASH"/>
+                            </items>
+                        </Select>
+
+                        <Label id="idLblPhone" text="{i18n>MobileNumberlb6}" visible="false"/>
+                        <Input id="idInputPhone" value="" visible="false"/>
+                        <Label id="idLblCreditCard" text="{i18n>CreditCarddetails}" visible="false"/>
+                        <Input id="idInputCreditCard" value="" visible="false"/>
+
+                    </f:content>
+                </f:SimpleForm>
+            <core:Fragment fragmentName="com.training.day3exer1gonzales.fragment.ShoppingCart" type="XML" />
+        </VBox>
+<footer>
+            <OverflowToolbar id="idOFTFooter">
+                <ToolbarSpacer id="idTSpacerFooter"/>
+                <Button id="idBtnCheckout" text="{i18n>CheckOutlb17}" tooltip="{i18n>CheckOut}" press="onPressCheckout"/>
+            </OverflowToolbar>
+</footer>
+
+</Page>
+</mvc:View>
